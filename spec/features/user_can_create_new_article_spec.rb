@@ -9,8 +9,8 @@ describe 'user creates a new article' do
 
         expect(current_path).to eq(new_article_path)
 
-        fill_in 'article[:title', with: 'Test Title!'
-        fill_in 'article[:body]', with: 'Test Bod.'
+        fill_in 'article[title]', with: 'Test Title!'
+        fill_in 'article[body]', with: 'Test Bod.'
         click_on 'Create Article'
 
         expect(page).to have_content('Test Title!')
