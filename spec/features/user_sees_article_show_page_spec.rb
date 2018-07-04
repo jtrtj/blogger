@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'user sees on article' do
   describe 'they link from articles index' do
     it 'diplays information for one article' do
-      article = Article.create!(title: 'test article' body: 'testing testing 123')
+      article = Article.create!(title: 'test article', body: 'testing testing 123')
 
       visit articles_path
       click_link article.title
