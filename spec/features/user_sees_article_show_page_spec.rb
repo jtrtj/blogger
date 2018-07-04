@@ -8,7 +8,7 @@ describe 'user sees on article' do
       visit articles_path
       click_link article.title
 
-      expect(current_path).to eq("articles/#{article.id}")
+      expect(current_path).to eq("/articles/#{article.id}")
       expect(page).to have_content(article.title)
       expect(page).to have_content(article.body)
     end
