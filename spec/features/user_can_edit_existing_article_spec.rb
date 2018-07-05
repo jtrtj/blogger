@@ -18,6 +18,7 @@ describe 'user edits an existing article' do
         expect(current_path).to eq("/articles/#{article.id}")
         expect(page).to have_content('updated title')
         expect(page).to have_content('updated body')
+        expect(page).to have_content("Article #{article.title} was updated.")
       end
     end
   end
