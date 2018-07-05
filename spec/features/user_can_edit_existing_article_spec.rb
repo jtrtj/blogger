@@ -13,7 +13,7 @@ describe 'user edits an existing article' do
 
         fill_in 'article[title]', with: 'updated title'
         fill_in 'article[body]', with: 'updated body'
-        click_on 'Edit Article'
+        click_on 'Update Article'
 
         expect(current_path).to eq("/articles")
         expect(page).to have_content('article.title')
