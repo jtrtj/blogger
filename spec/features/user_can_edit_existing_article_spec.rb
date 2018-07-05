@@ -15,8 +15,9 @@ describe 'user edits an existing article' do
         fill_in 'article[body]', with: 'updated body'
         click_on 'Update Article'
 
-        expect(current_path).to eq("/articles")
-        expect(page).to have_content('article.title')
+        expect(current_path).to eq("/articles/#{article.id}")
+        expect(page).to have_content('updated title')
+        expect(page).to have_content('updated body')
       end
     end
   end
