@@ -13,6 +13,7 @@ describe 'user creates a new article' do
         fill_in 'article[body]', with: 'Test Bod.'
         click_on 'Create Article'
 
+        expect(page).to have_content("Article 'Test Title!' Created!")
         expect(page).to have_content('Test Title!')
         expect(page).to have_content('Test Bod.')
       end
